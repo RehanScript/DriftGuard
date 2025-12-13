@@ -62,24 +62,46 @@ function formatTime(totalSeconds) {
 }
 
 function playRandomCue() {
+    // Define the delay in milliseconds (1 second)
+    const START_DELAY_MS = 1000;
+    
     let audioSourceArray = (currentAudioSource === 'default') ? DEFAULT_AUDIO_CUES : uploadedAudioFiles;
+    
     if (audioSourceArray.length === 0) {
         console.warn("No audio cues available to play.");
         return;
     }
+
     const randomIndex = Math.floor(Math.random() * audioSourceArray.length);
     const audioCue = audioSourceArray[randomIndex];
+
     let audioURL;
     if (currentAudioSource === 'uploaded') {
-        audioURL = URL.createObjectURL(audioCue);
+        // Create a temporary URL for the File object
+        audioURL = URL.createObjectURL(audioCue); 
     } else {
-        audioURL = audioCue;
+        // Use the placeholder path for default audios
+        audioURL = audioCue; 
     }
+
     const audio = new Audio(audioURL);
-    audio.play().catch(e => console.error("Audio playback failed (check browser console):", e));
-    if (currentAudioSource === 'uploaded') {
-        audio.onended = () => URL.revokeObjectURL(audioURL);
-    }
+    
+    console.log(`Delaying playback for ${START_DELAY_MS}ms to ensure smooth start...`);
+
+    // Use setTimeout to create the 1-second blank buffer
+    setTimeout(() => {
+        // Attempt to play the audio after the delay
+        audio.play().catch(e => {
+            console.error("Audio playback failed (check browser console). Note: Browsers often block automatic playback before user interaction.", e);
+        });
+        
+        // Revoke temporary URL for uploaded files after use
+        if (currentAudioSource === 'uploaded') {
+            // Wait for the audio to finish before revoking the object URL
+            audio.onended = () => URL.revokeObjectURL(audioURL);
+        }
+
+    }, START_DELAY_MS); // The delay is applied here
 }
 
 function updateSessionTimer() {
@@ -299,4 +321,5 @@ function handleUploadAudioClick() {
 function handleDefaultAudioClick() {
     currentAudioSource = 'default';
     showDefaultConfig();
+
 }
