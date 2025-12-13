@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriftGuard: Focus-Cue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-right-utility">
+        <button id="feedback-btn" class="utility-button">
+            Feedback
+        </button>
+        
+        <button id="contact-us-btn" class="utility-button">
+            Contact Us
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h1>DriftGuard</h1>
+            <p class="tagline">Stay Zoned. Beat the mental drift.</p>
+
+            <section class="intro-description">
+                <h2 class="intro-heading">Regain Your Focus. Stop the Drift.</h2>
+                <p>
+                    **DriftGuard** uses randomized audio prompts at scheduled intervals to interrupt mental wandering. If you find yourself daydreaming or thinking about unrelated tasks, a gentle sound will pull you back to reality.
+                </p>
+                <p class="benefit">
+                    This simple, proven technique dramatically boosts time-on-task and productivity.
+                </p>
+            </section>
+            
+            <div class="audio-options">
+                <h2>Choose Your Audio Source:</h2>
+                
+                <button id="upload-audio-btn" class="btn btn-accent">
+                    Upload Your Own Audio
+                </button>
+                
+                <button id="default-audio-btn" class="btn btn-secondary">
+                    Use Default Audio Set
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container config-container hidden" id="config-container">
+        <div class="card config-card">
+            <h2><span id="config-title-source">Default</span> Reminder Setup</h2>
+            <p class="description">How often do you need a gentle reminder to stay focused?</p>
+            
+            <div class="input-group">
+                <label for="interval-minutes">Remind me every (minutes):</label>
+                <input type="number" id="interval-minutes" value="5" min="1" max="60">
+            </div>
+
+            <div class="session-duration-group">
+                <label class="duration-label">Session Duration:</label>
+                <div class="duration-presets" id="duration-presets">
+                    <button class="preset-btn" data-minutes="10">10m</button>
+                    <button class="preset-btn" data-minutes="20">20m</button>
+                    <button class="preset-btn preset-active" data-minutes="30">30m</button>
+                    <button class="preset-btn" data-minutes="40">40m</button>
+                    <button class="preset-btn" data-minutes="50">50m</button>
+                    <button class="preset-btn" data-minutes="60">60m</button>
+                    <button class="preset-btn" data-minutes="0">Indefinite</button>
+                </div>
+                <input type="hidden" id="session-duration-value" value="30">
+            </div>
+
+            <button id="start-session-btn" class="btn btn-accent">
+                Start DriftGuard Session
+            </button>
+            <button id="back-to-home-btn" class="btn btn-secondary small-btn">
+                ← Back
+            </button>
+        </div>
+    </div>
+    
+    <div class="modal-backdrop hidden" id="upload-modal-backdrop">
+        <div class="card upload-modal">
+            <h3>Upload Your Audio Cues (Max 10)</h3>
+            <p class="description">Select audio files (MP3, WAV, etc.) that you want DriftGuard to play as reminders.</p>
+
+            <div class="upload-controls">
+                <input type="file" id="audio-file-input" accept="audio/*" multiple style="display: none;">
+                <button id="select-files-btn" class="btn btn-secondary small-btn">
+                    Select Audio Files
+                </button>
+                <span id="file-count-status" class="status-text">0 / 10 files selected</span>
+            </div>
+
+            <div id="audio-list-container" class="audio-list">
+                <p id="no-files-message" class="subtle-text">No audio files added yet.</p>
+            </div>
+            
+            <div class="modal-actions">
+                <button id="submit-uploaded-btn" class="btn btn-accent" disabled>
+                    Use Selected Audios
+                </button>
+                <button id="close-upload-modal-btn" class="btn btn-secondary small-btn">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container focus-session-container hidden" id="focus-session-container">
+        <div class="card focus-card">
+            <h2 id="focus-title">Focus Session Active</h2>
+            <p id="time-remaining-label">Time Remaining in Session:</p>
+            <div class="timer-display">
+                <span id="session-timer-display" class="timer-main">00:00</span>
+            </div>
+
+            <p id="next-cue-label">Next audio cue in: <span id="cue-timer-display" class="timer-sub">00:00</span></p>
+
+            <button id="pause-session-btn" class="btn btn-secondary small-btn session-control">
+                Pause
+            </button>
+            <button id="end-session-btn" class="btn accent-danger small-btn session-control">
+                Stop Session
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
