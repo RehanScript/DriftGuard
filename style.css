@@ -33,7 +33,6 @@ body {
 .card {
     background-color: var(--bg-charcoal);
     border: 1px solid var(--secondary-gray);
-    /* Reduced desktop padding for mobile friendliness */
     padding: 40px 50px; 
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -440,88 +439,88 @@ h1 {
 /* ======================================= */
 
 @media (max-width: 600px) {
-    /* --- General Card & Layout Adjustments --- */
-    .container {
-        padding: 0; /* Remove side padding on very small screens */
-    }
+    /* --- General Card & Layout Adjustments --- */
+    .container {
+        padding: 0; /* Remove side padding on very small screens */
+    }
 
-    .card {
-        padding: 30px 20px; /* Reduce padding inside the card */
-        max-width: 100%; /* Allow card to take full width */
-        width: 100%;
-        min-height: 100vh; /* Make card fill the screen height */
-        border-radius: 0; /* Remove border radius on mobile fullscreen */
-        border: none;
-    }
+    .card {
+        padding: 30px 20px; /* Reduce padding inside the card */
+        max-width: 100%; /* Allow card to take full width */
+        width: 100%;
+        min-height: 100vh; /* Make card fill the screen height */
+        border-radius: 0; /* Remove border radius on mobile fullscreen */
+        border: none;
+    }
 
-    /* --- Typography Adjustments --- */
-    h1 {
-        font-size: 2em; /* Shrink main title */
-    }
-    .intro-heading {
-        font-size: 1.2em;
-    }
-    .intro-description p {
-        font-size: 0.9em; /* Slightly smaller body text */
-    }
+    /* --- Typography Adjustments --- */
+    h1 {
+        font-size: 2em; /* Shrink main title */
+    }
+    .intro-heading {
+        font-size: 1.2em;
+    }
+    .intro-description p {
+        font-size: 0.9em; /* Slightly smaller body text */
+    }
 
-    /* --- Utility Button Position Adjustment --- */
-    .top-right-utility {
-        top: 10px;
-        right: 10px;
-    }
-    .utility-button {
-        padding: 6px 10px;
-        font-size: 0.8em;
-    }
+    /* --- Utility Button Position Adjustment --- */
+    .top-right-utility {
+        top: 10px;
+        right: 10px;
+    }
+    .utility-button {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
 
-    /* --- Configuration Screen Adjustments --- */
-    .input-group {
-        flex-direction: column; /* Stack label and input vertically */
-        align-items: flex-start;
-        margin-bottom: 30px;
-    }
-    .input-group label {
-        margin-bottom: 8px; /* Space between label and stacked input */
-        margin-right: 0;
-    }
-    .input-group input[type="number"] {
-        width: 100%; /* Input takes full width */
-        box-sizing: border-box; /* Include padding/border in element's total width */
-        text-align: left;
-    }
+    /* --- Configuration Screen Adjustments --- */
+    .input-group {
+        flex-direction: column; /* Stack label and input vertically */
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    .input-group label {
+        margin-bottom: 8px; /* Space between label and stacked input */
+        margin-right: 0;
+    }
+    .input-group input[type="number"] {
+        width: 100%; /* Input takes full width */
+        box-sizing: border-box; /* Include padding/border in element's total width */
+        text-align: left;
+    }
 
-    /* --- Session Presets Layout --- */
-    .duration-presets {
-        justify-content: space-between; /* Spread buttons out horizontally */
-        gap: 5px; /* Reduce gap */
-    }
-    .preset-btn {
-        flex-grow: 1; 
-        padding: 10px 5px;
-        max-width: none; /* Let flex-grow handle sizing */
-        font-size: 0.85em;
-    }
+    /* --- Session Presets Layout --- */
+    .duration-presets {
+        justify-content: space-between; /* Spread buttons out horizontally */
+        gap: 5px; /* Reduce gap */
+    }
+    .preset-btn {
+        flex-grow: 1; 
+        padding: 10px 5px;
+        max-width: none; /* Let flex-grow handle sizing */
+        font-size: 0.85em;
+    }
 
-    /* --- Modal Adjustments --- */
-    .upload-modal {
-        padding: 20px;
-        max-width: 100%;
-        min-height: 100vh;
-        border-radius: 0;
-    }
+    /* --- Modal Adjustments --- */
+    .upload-modal {
+        padding: 20px;
+        max-width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
 
-    /* --- Focus Timer Screen Adjustments --- */
-    .timer-main {
-        font-size: 3em; /* Shrink main timer */
-    }
-    .timer-sub {
-        font-size: 1.2em; /* Shrink sub timer */
-    }
-    
-    /* Ensure session controls stack well if necessary, but keep inline-block for two columns */
-    .session-control {
-        width: 49%; /* Keep 2 columns */
-        margin: 5px 0;
-    }
+    /* --- Focus Timer Screen Adjustments --- */
+    .timer-main {
+        font-size: 3em; /* Shrink main timer */
+    }
+    .timer-sub {
+        font-size: 1.2em; /* Shrink sub timer */
+    }
+    
+    /* Ensure session controls stack well if necessary, but keep inline-block for two columns */
+    .session-control {
+        width: 49%; /* Keep 2 columns */
+        margin: 5px 0;
+    }
 }
