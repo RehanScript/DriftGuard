@@ -1,437 +1,437 @@
 /* Color Palette Variables (Based on user specification) */
 :root {
-    --bg-charcoal: #1A1A1A; /* Background */
-    --text-off-white: #EBEBEB; /* Primary Text */
-    --accent-cyan: #4DD0E1; /* Accent (Active) */
-    --secondary-gray: #757575; /* Secondary (Inactive) */
-    --delete-red: #FF7043; /* Custom for remove buttons */
+    --bg-charcoal: #1A1A1A; /* Background */
+    --text-off-white: #EBEBEB; /* Primary Text */
+    --accent-cyan: #4DD0E1; /* Accent (Active) */
+    --secondary-gray: #757575; /* Secondary (Inactive) */
+    --delete-red: #FF7043; /* Custom for remove buttons */
 }
 
 /* --- Global Styles & Layout --- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-charcoal);
-    color: var(--text-off-white);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-charcoal);
+    color: var(--text-off-white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Utility class to hide elements */
 .hidden {
-    display: none !important;
+    display: none !important;
 }
 
 /* Card Container */
 .container {
-    padding: 20px;
+    padding: 20px;
 }
 
 .card {
-    background-color: var(--bg-charcoal);
-    border: 1px solid var(--secondary-gray);
-    padding: 40px 50px; 
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    max-width: 450px;
-    width: 90%;
+    background-color: var(--bg-charcoal);
+    border: 1px solid var(--secondary-gray);
+    padding: 40px 50px; 
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
 }
 
 /* --- Typography --- */
 h1 {
-    color: var(--accent-cyan);
-    margin-bottom: 5px;
-    font-size: 2.5em;
+    color: var(--accent-cyan);
+    margin-bottom: 5px;
+    font-size: 2.5em;
 }
 
 .tagline {
-    color: var(--secondary-gray);
-    font-style: italic;
-    margin-bottom: 30px;
+    color: var(--secondary-gray);
+    font-style: italic;
+    margin-bottom: 30px;
 }
 
 /* Introductory Description Section */
 .intro-description {
-    text-align: left;
-    margin-bottom: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--secondary-gray);
+    text-align: left;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--secondary-gray);
 }
 
 .intro-heading {
-    color: var(--accent-cyan);
-    font-size: 1.3em;
-    margin-top: 0;
-    margin-bottom: 10px;
+    color: var(--accent-cyan);
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .intro-description p {
-    color: var(--secondary-gray);
-    line-height: 1.6;
-    margin-bottom: 15px;
-    font-size: 0.95em;
+    color: var(--secondary-gray);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.95em;
 }
 
 .intro-description .benefit {
-    color: var(--text-off-white);
-    font-weight: bold;
+    color: var(--text-off-white);
+    font-weight: bold;
 }
 
 /* Audio Options Section */
 .audio-options {
-    padding-top: 10px;
+    padding-top: 10px;
 }
 
 .audio-options h2 {
-    color: var(--text-off-white);
-    font-size: 1.2em;
-    margin-bottom: 25px;
-    margin-top: 0;
+    color: var(--text-off-white);
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    margin-top: 0;
 }
 
 /* --- Button Styling --- */
 .btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-weight: bold;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
 }
 
 .btn-accent {
-    background-color: var(--accent-cyan);
-    color: var(--bg-charcoal);
+    background-color: var(--accent-cyan);
+    color: var(--bg-charcoal);
 }
 
 .btn-accent:hover {
-    background-color: #6FF4FF;
+    background-color: #6FF4FF;
 }
 
 .btn-secondary {
-    background-color: var(--secondary-gray);
-    color: var(--text-off-white);
+    background-color: var(--secondary-gray);
+    color: var(--text-off-white);
 }
 
 .btn-secondary:hover {
-    background-color: #9E9E9E;
+    background-color: #9E9E9E;
 }
 
 .small-btn {
-    padding: 10px;
-    font-size: 0.9em;
+    padding: 10px;
+    font-size: 0.9em;
 }
 
 .accent-danger {
-    background-color: var(--delete-red); /* Using the danger color for the Stop button */
-    color: var(--text-off-white);
+    background-color: var(--delete-red); /* Using the danger color for the Stop button */
+    color: var(--text-off-white);
 }
 
 .accent-danger:hover {
-    background-color: #FF5252;
+    background-color: #FF5252;
 }
 
 /* --- Top-Right Utility Buttons (Feedback/Contact Us) --- */
 .top-right-utility {
-    position: fixed; 
-    top: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 100;
+    position: fixed; 
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
 }
 
 .utility-button {
-    background-color: var(--secondary-gray); 
-    color: var(--text-off-white);
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    cursor: pointer;
-    opacity: 0.8; 
-    transition: background-color 0.3s, opacity 0.3s;
-    margin-bottom: 10px; /* Gap between the buttons */
+    background-color: var(--secondary-gray); 
+    color: var(--text-off-white);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    opacity: 0.8; 
+    transition: background-color 0.3s, opacity 0.3s;
+    margin-bottom: 10px; /* Gap between the buttons */
 }
 
 .utility-button:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .utility-button:hover {
-    background-color: #9E9E9E;
-    opacity: 1;
+    background-color: #9E9E9E;
+    opacity: 1;
 }
 
 /* --- 2. CONFIGURATION SCREEN STYLES --- */
 .config-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .config-card {
-    text-align: left;
+    text-align: left;
 }
 
 .config-card h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .config-card .description {
-    color: var(--secondary-gray);
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 1.1em;
+    color: var(--secondary-gray);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
 }
 
 .input-group {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .input-group label {
-    color: var(--text-off-white);
-    font-size: 1em;
-    font-weight: bold;
-    margin-right: 15px;
+    color: var(--text-off-white);
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 15px;
 }
 
 .input-group input[type="number"] {
-    background-color: var(--bg-charcoal);
-    color: var(--text-off-white);
-    border: 1px solid var(--secondary-gray);
-    border-radius: 4px;
-    padding: 10px;
-    width: 80px;
-    text-align: center;
-    font-size: 1em;
+    background-color: var(--bg-charcoal);
+    color: var(--text-off-white);
+    border: 1px solid var(--secondary-gray);
+    border-radius: 4px;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 1em;
 }
 
 /* --- New Preset Styles --- */
 .session-duration-group {
-    text-align: left;
-    margin-bottom: 25px;
-    padding-top: 10px;
+    text-align: left;
+    margin-bottom: 25px;
+    padding-top: 10px;
 }
 
 .duration-label {
-    color: var(--text-off-white);
-    font-size: 1em;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 15px;
+    color: var(--text-off-white);
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .duration-presets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
 }
 
 .preset-btn {
-    background-color: var(--bg-charcoal);
-    color: var(--secondary-gray);
-    border: 1px solid var(--secondary-gray);
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-    flex-grow: 1; 
-    max-width: 90px;
-    transition: all 0.2s;
+    background-color: var(--bg-charcoal);
+    color: var(--secondary-gray);
+    border: 1px solid var(--secondary-gray);
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    flex-grow: 1; 
+    max-width: 90px;
+    transition: all 0.2s;
 }
 
 .preset-btn:hover {
-    border-color: var(--accent-cyan);
-    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
 }
 
 .preset-btn.preset-active {
-    background-color: var(--accent-cyan);
-    color: var(--bg-charcoal); 
-    border-color: var(--accent-cyan);
-    font-weight: bold;
+    background-color: var(--accent-cyan);
+    color: var(--bg-charcoal); 
+    border-color: var(--accent-cyan);
+    font-weight: bold;
 }
 
 
 /* --- 3. UPLOAD AUDIO MODAL STYLES --- */
 
 .modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--bg-charcoal);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-charcoal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
 }
 
 .upload-modal {
-    max-width: 550px;
-    width: 90%;
-    padding: 30px;
+    max-width: 550px;
+    width: 90%;
+    padding: 30px;
 }
 
 .upload-modal h3 {
-    text-align: center;
-    color: var(--accent-cyan);
-    margin-bottom: 5px;
+    text-align: center;
+    color: var(--accent-cyan);
+    margin-bottom: 5px;
 }
 
 .upload-modal .description {
-    text-align: center;
-    color: var(--secondary-gray);
-    margin-bottom: 25px;
+    text-align: center;
+    color: var(--secondary-gray);
+    margin-bottom: 25px;
 }
 
 /* Upload Controls */
 .upload-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-top: 1px solid var(--secondary-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid var(--secondary-gray);
 }
 
 .status-text {
-    color: var(--text-off-white);
-    font-size: 0.9em;
+    color: var(--text-off-white);
+    font-size: 0.9em;
 }
 
 /* Audio List Styling */
 .audio-list {
-    min-height: 150px;
-    max-height: 300px;
-    overflow-y: auto;
-    border: 1px solid var(--secondary-gray);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 20px 0;
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--secondary-gray);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
 }
 
 .audio-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 5px;
-    border-bottom: 1px dashed var(--secondary-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5px;
+    border-bottom: 1px dashed var(--secondary-gray);
 }
 
 .audio-list-item:last-child {
-    border-bottom: none;
+    border-bottom: none;
 }
 
 .audio-list-item span {
-    color: var(--text-off-white);
-    font-size: 0.95em;
-    max-width: 70%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    color: var(--text-off-white);
+    font-size: 0.95em;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .remove-btn {
-    background: none;
-    border: none;
-    color: var(--delete-red); 
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.9em;
-    padding: 5px;
+    background: none;
+    border: none;
+    color: var(--delete-red); 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 5px;
 }
 
 .remove-btn:hover {
-    color: #FFAB91;
+    color: #FFAB91;
 }
 
 .subtle-text {
-    color: var(--secondary-gray);
-    text-align: center;
-    padding: 50px 0;
+    color: var(--secondary-gray);
+    text-align: center;
+    padding: 50px 0;
 }
 
 /* Modal Action Buttons */
 .modal-actions {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 
 /* --- 4. FOCUS SESSION TIMER SCREEN STYLES --- */
 .focus-session-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .focus-card {
-    text-align: center;
+    text-align: center;
 }
 
 .timer-display {
-    margin: 30px 0;
-    padding: 20px;
+    margin: 30px 0;
+    padding: 20px;
 }
 
 .timer-main {
-    font-size: 4em;
-    font-weight: bold;
-    color: var(--accent-cyan);
-    display: block;
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--accent-cyan);
+    display: block;
 }
 
 .timer-sub {
-    color: var(--text-off-white);
-    font-size: 1.5em;
-    font-weight: bold;
+    color: var(--text-off-white);
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #time-remaining-label {
-    color: var(--secondary-gray);
-    font-size: 1.2em;
-    margin-bottom: 0;
+    color: var(--secondary-gray);
+    font-size: 1.2em;
+    margin-bottom: 0;
 }
 
 #next-cue-label {
-    color: var(--secondary-gray);
-    font-size: 0.9em;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    color: var(--secondary-gray);
+    font-size: 0.9em;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .session-control {
-    width: 48%; /* Adjust button width */
-    display: inline-block;
-    margin: 5px;
+    width: 48%; /* Adjust button width */
+    display: inline-block;
+    margin: 5px;
 }
 
 /* ======================================= */
@@ -439,88 +439,88 @@ h1 {
 /* ======================================= */
 
 @media (max-width: 600px) {
-    /* --- General Card & Layout Adjustments --- */
-    .container {
-        padding: 0; /* Remove side padding on very small screens */
-    }
+    /* --- General Card & Layout Adjustments --- */
+    .container {
+        padding: 0; /* Remove side padding on very small screens */
+    }
 
-    .card {
-        padding: 30px 20px; /* Reduce padding inside the card */
-        max-width: 100%; /* Allow card to take full width */
-        width: 100%;
-        min-height: 100vh; /* Make card fill the screen height */
-        border-radius: 0; /* Remove border radius on mobile fullscreen */
-        border: none;
-    }
+    .card {
+        padding: 30px 20px; /* Reduce padding inside the card */
+        max-width: 100%; /* Allow card to take full width */
+        width: 100%;
+        min-height: 100vh; /* Make card fill the screen height */
+        border-radius: 0; /* Remove border radius on mobile fullscreen */
+        border: none;
+    }
 
-    /* --- Typography Adjustments --- */
-    h1 {
-        font-size: 2em; /* Shrink main title */
-    }
-    .intro-heading {
-        font-size: 1.2em;
-    }
-    .intro-description p {
-        font-size: 0.9em; /* Slightly smaller body text */
-    }
+    /* --- Typography Adjustments --- */
+    h1 {
+        font-size: 2em; /* Shrink main title */
+    }
+    .intro-heading {
+        font-size: 1.2em;
+    }
+    .intro-description p {
+        font-size: 0.9em; /* Slightly smaller body text */
+    }
 
-    /* --- Utility Button Position Adjustment --- */
-    .top-right-utility {
-        top: 10px;
-        right: 10px;
-    }
-    .utility-button {
-        padding: 6px 10px;
-        font-size: 0.8em;
-    }
+    /* --- Utility Button Position Adjustment --- */
+    .top-right-utility {
+        top: 10px;
+        right: 10px;
+    }
+    .utility-button {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
 
-    /* --- Configuration Screen Adjustments --- */
-    .input-group {
-        flex-direction: column; /* Stack label and input vertically */
-        align-items: flex-start;
-        margin-bottom: 30px;
-    }
-    .input-group label {
-        margin-bottom: 8px; /* Space between label and stacked input */
-        margin-right: 0;
-    }
-    .input-group input[type="number"] {
-        width: 100%; /* Input takes full width */
-        box-sizing: border-box; /* Include padding/border in element's total width */
-        text-align: left;
-    }
+    /* --- Configuration Screen Adjustments --- */
+    .input-group {
+        flex-direction: column; /* Stack label and input vertically */
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    .input-group label {
+        margin-bottom: 8px; /* Space between label and stacked input */
+        margin-right: 0;
+    }
+    .input-group input[type="number"] {
+        width: 100%; /* Input takes full width */
+        box-sizing: border-box; /* Include padding/border in element's total width */
+        text-align: left;
+    }
 
-    /* --- Session Presets Layout --- */
-    .duration-presets {
-        justify-content: space-between; /* Spread buttons out horizontally */
-        gap: 5px; /* Reduce gap */
-    }
-    .preset-btn {
-        flex-grow: 1; 
-        padding: 10px 5px;
-        max-width: none; /* Let flex-grow handle sizing */
-        font-size: 0.85em;
-    }
+    /* --- Session Presets Layout --- */
+    .duration-presets {
+        justify-content: space-between; /* Spread buttons out horizontally */
+        gap: 5px; /* Reduce gap */
+    }
+    .preset-btn {
+        flex-grow: 1; 
+        padding: 10px 5px;
+        max-width: none; /* Let flex-grow handle sizing */
+        font-size: 0.85em;
+    }
 
-    /* --- Modal Adjustments --- */
-    .upload-modal {
-        padding: 20px;
-        max-width: 100%;
-        min-height: 100vh;
-        border-radius: 0;
-    }
+    /* --- Modal Adjustments --- */
+    .upload-modal {
+        padding: 20px;
+        max-width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
 
-    /* --- Focus Timer Screen Adjustments --- */
-    .timer-main {
-        font-size: 3em; /* Shrink main timer */
-    }
-    .timer-sub {
-        font-size: 1.2em; /* Shrink sub timer */
-    }
-    
-    /* Ensure session controls stack well if necessary, but keep inline-block for two columns */
-    .session-control {
-        width: 49%; /* Keep 2 columns */
-        margin: 5px 0;
-    }
+    /* --- Focus Timer Screen Adjustments --- */
+    .timer-main {
+        font-size: 3em; /* Shrink main timer */
+    }
+    .timer-sub {
+        font-size: 1.2em; /* Shrink sub timer */
+    }
+    
+    /* Ensure session controls stack well if necessary, but keep inline-block for two columns */
+    .session-control {
+        width: 49%; /* Keep 2 columns */
+        margin: 5px 0;
+    }
 }
