@@ -1,0 +1,99 @@
+/* Note: This file relies heavily on styles defined in style.css */
+
+/* --- Policy Page Specific Layout --- */
+
+.policy-container {
+    padding: 20px;
+    /* Override global container to prevent it from hiding other elements */
+    min-height: auto; 
+    padding-top: 50px; /* Space from utility buttons */
+    padding-bottom: 50px;
+}
+
+.policy-card {
+    /* Adjust card width and padding for long-form content */
+    max-width: 800px;
+    width: 95%;
+    padding: 50px;
+    text-align: left; /* Essential for reading long text */
+}
+
+/* Adjust card on mobile for better reading */
+@media (max-width: 600px) {
+    .policy-card {
+        padding: 20px;
+        min-height: auto;
+        width: 100%;
+    }
+}
+
+
+/* --- Policy Typography --- */
+
+.policy-card h1 {
+    color: var(--text-off-white);
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.policy-card .tagline {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.policy-card h2 {
+    color: var(--accent-cyan);
+    font-size: 1.5em;
+    margin-top: 30px;
+    border-bottom: 1px solid var(--secondary-gray);
+    padding-bottom: 5px;
+}
+
+.policy-card h3 {
+    color: var(--text-off-white);
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.policy-card p {
+    color: var(--secondary-gray);
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.policy-card strong {
+    color: var(--text-off-white);
+}
+
+.policy-card ul {
+    color: var(--secondary-gray);
+    margin-left: 20px;
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+.policy-card ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* --- Links and Footer --- */
+.policy-card a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.policy-card a:hover {
+    color: #6FF4FF;
+    text-decoration: underline;
+}
+
+.policy-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--secondary-gray);
+}
