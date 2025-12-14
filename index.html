@@ -16,6 +16,10 @@
         <button id="contact-us-btn" class="utility-button">
             Contact Us
         </button>
+        
+        <button id="privacy-policy-btn" class="utility-button">
+            Privacy Policy
+        </button>
     </div>
 
     <div class="container">
@@ -26,7 +30,7 @@
             <section class="intro-description">
                 <h2 class="intro-heading">Regain Your Focus. Stop the Drift.</h2>
                 <p>
-                    **DriftGuard** uses randomized audio prompts at scheduled intervals to interrupt mental wandering. If you find yourself daydreaming or thinking about unrelated tasks, a gentle sound will pull you back to reality.
+                    <b>DriftGuard</b> uses scheduled, randomized audio cues to gently interrupt mental wandering and bring your focus back to the task at hand.
                 </p>
                 <p class="benefit">
                     This simple, proven technique dramatically boosts time-on-task and productivity.
@@ -58,7 +62,7 @@
             </div>
 
             <div class="session-duration-group">
-                <label class="duration-label">Session Duration:</label>
+                <label class="duration-label">Focus Session Duration (minutes):</label>
                 <div class="duration-presets" id="duration-presets">
                     <button class="preset-btn" data-minutes="10">10m</button>
                     <button class="preset-btn" data-minutes="20">20m</button>
@@ -69,6 +73,16 @@
                     <button class="preset-btn" data-minutes="0">Indefinite</button>
                 </div>
                 <input type="hidden" id="session-duration-value" value="30">
+            </div>
+
+            <div class="input-group">
+                <label for="num-sessions">Number of Focus Sessions:</label>
+                <input type="number" id="num-sessions" value="4" min="1" max="10">
+            </div>
+
+            <div class="input-group">
+                <label for="break-duration">Break Duration (minutes):</label>
+                <input type="number" id="break-duration" value="5" min="1" max="30">
             </div>
 
             <button id="start-session-btn" class="btn btn-accent">
